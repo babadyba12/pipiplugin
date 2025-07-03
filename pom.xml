@@ -3,6 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>me.wolfworld</groupId>
   <artifactId>PipiPlugin</artifactId>
   <version>1.0.0</version>
@@ -10,15 +11,15 @@
 
   <repositories>
     <repository>
-      <id>spigot-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+      <id>papermc</id>
+      <url>https://repo.papermc.io/repository/maven-public/</url>
     </repository>
   </repositories>
 
   <dependencies>
     <dependency>
-      <groupId>org.purpurmc.purpur</groupId>
-      <artifactId>purpur-api</artifactId>
+      <groupId>io.papermc.paper</groupId>
+      <artifactId>paper-api</artifactId>
       <version>1.19.4-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
@@ -35,6 +36,7 @@
           <target>17</target>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
@@ -42,7 +44,9 @@
         <executions>
           <execution>
             <phase>package</phase>
-            <goals><goal>shade</goal></goals>
+            <goals>
+              <goal>shade</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>
