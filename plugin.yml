@@ -1,0 +1,12 @@
+name: PipiPlugin
+version: 1.0.0
+main: me.wolfworld.pipi.PipiPlugin
+api-version: "1.19"
+author: WolfWorld
+commands:
+  pipi:
+    description: Make your player... you know 😉
+    usage: /pipi
+permissions:
+  pipi.use:
+    default: true
