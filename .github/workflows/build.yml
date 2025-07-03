@@ -23,7 +23,7 @@ jobs:
       run: mvn package
 
     - name: Upload plugin JAR
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: PipiPlugin.jar
         path: target/PipiPlugin-1.0.0.jar
